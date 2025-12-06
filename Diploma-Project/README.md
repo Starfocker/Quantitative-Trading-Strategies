@@ -85,6 +85,8 @@ Quantitative-Trading-Strategies/
 │
 └── README.md
 
+---
+
 ## Notes on Issues Identified After Project Completion
 
 1. **Potential FinBERT Look-Ahead Bias**  
