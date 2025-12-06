@@ -23,7 +23,6 @@ Evaluation includes **Fama-MacBeth cross-sectional IC**, **long–short factor p
 
 ---
 
-```markdown
 ## Project Structure
 
 Quantitative-Trading-Strategies/
