@@ -84,3 +84,52 @@ Quantitative-Trading-Strategies/
 │   ├── README.md
 │
 └── README.md
+
+## Notes on Issues Identified After Project Completion
+
+1. **Potential FinBERT Look-Ahead Bias**  
+   Although only past news was used during modeling, FinBERT is pretrained on a broad historical corpus that includes later-period text.  
+   This may introduce mild structural look-ahead effects.
+
+2. **Factor Testing Method Not Fully Appropriate**  
+   The report used pooled regressions to evaluate factor significance.  
+   A more appropriate approach would be applying Fama–MacBeth IC testing and factor long–short portfolios for assessing cross-sectional predictive power.
+
+---
+
+## Data Access  
+Full datasets and intermediate processed files can be accessed here:  
+https://drive.google.com/drive/folders/1slYxjsxwI0v614aNnJi4T_h61Yyw3NKo
+
+---
+
+## Citation  
+Yifan. (2025). *Adaptive Multi-Signal Systematic Trading Strategies*.  
+MSc FinTech Diploma Project, Imperial College London.
+
+Yifan. (2025). *Quantitative-Trading-Strategies*. GitHub Repository.  
+https://github.com/Starfocker/Quantitative-Trading-Strategies
+
+---
+
+## BibTeX
+@report{yifan2025adaptive,
+  title       = {Adaptive Multi-Signal Systematic Trading Strategies},
+  author      = {Yifan},
+  year        = {2025},
+  institution = {Imperial College London},
+  note        = {MSc FinTech Diploma Project}
+}
+
+@software{yifan2025qts,
+  author  = {Yifan},
+  title   = {Quantitative-Trading-Strategies Codebase for Adaptive Multi-Signal Systematic Trading},
+  year    = {2025},
+  url     = {https://github.com/Starfocker/Quantitative-Trading-Strategies},
+  version = {1.0}
+}
+
+---
+
+## Contact  
+For questions or reproduction inquiries, please open an issue on the repository.
