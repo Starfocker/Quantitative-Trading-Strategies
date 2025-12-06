@@ -84,6 +84,7 @@ Quantitative-Trading-Strategies/
 │   ├── README.md
 │
 └── README.md
+```
 
 ## Notes on Issues Identified After Project Completion
 
