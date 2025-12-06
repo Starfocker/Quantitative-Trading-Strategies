@@ -1,18 +1,31 @@
-Adaptive Multi-Signal Systematic Trading Strategies
+# Adaptive Multi-Signal Systematic Trading Strategies  
+MSc FinTech Diploma Project  
+Author: Yifan  
+Report: 2025-AP-FinTech  
+Institution: Imperial College London  
 
-MSc FinTech Diploma Project
-Author: Yifan
-Report: 2025-AP-FinTech
-Institution: Imperial College London
+---
 
-Overview
+## Overview
 
-This repository contains the full implementation of the MSc FinTech Diploma Project titled Adaptive Multi-Signal Systematic Trading Strategies.
-The research integrates price-based indicators, macroeconomic variables, and FinBERT-based text embeddings using machine learning and deep learning models including LASSO, XGBoost, VSN, and LSTM.
-Evaluation methods include Fama-MacBeth cross-sectional IC, long-short factor portfolios, meta-model regime filtering, and risk-managed backtesting from 2010 to 2022.
+This repository contains the full implementation of the MSc FinTech Diploma Project titled **Adaptive Multi-Signal Systematic Trading Strategies**.  
+The project integrates:
 
-Project Structure
+- Price-based technical indicators  
+- Macroeconomic variables  
+- FinBERT-based text embeddings  
+- Machine learning models (LASSO, XGBoost)  
+- Deep learning models (VSN, LSTM)  
+- Meta-model regime filtering  
+- Risk-managed portfolio construction  
 
+Evaluation includes **Fama-MacBeth cross-sectional IC**, **long–short factor portfolios**, and **backtests from 2010–2022**.
+
+---
+
+## Project Structure
+
+```text
 Quantitative-Trading-Strategies/
 │
 ├── VSN_LSTM/
@@ -71,93 +84,3 @@ Quantitative-Trading-Strategies/
 │   ├── README.md
 │
 └── README.md
-
-Data Access
-
-Due to file size limitations, complete datasets and intermediate files are available at the following link:
-
-https://drive.google.com/drive/folders/1slYxjsxwI0v614aNnJi4T_h61Yyw3NKo
-
-Methodological Notes
-1. FinBERT Look-Ahead Consideration
-
-FinBERT is a pretrained language model trained on historical financial news.
-Although only news published up to each trading day is used for feature construction, the pretrained embedding space may encode long-horizon structural information from its corpus.
-This does not constitute direct look-ahead leakage, but the possibility of minimal structural information leakage is acknowledged.
-
-2. Statistical Validation Using Fama-MacBeth IC
-
-Predictive validity is evaluated using a Fama-MacBeth cross-sectional regression framework.
-
-Steps:
-
-Compute the daily cross-sectional correlation (IC) between signals or model outputs and forward returns.
-
-Collect the IC time series across the sample period.
-
-Test whether the average IC is significantly different from zero using its time-series standard error.
-
-This provides a robust measure of cross-sectional predictability independent of any specific functional form.
-
-3. Long-Short Portfolio Evaluation
-
-To measure economic significance:
-
-Rank stocks cross-sectionally each day based on signal value.
-
-Form a long portfolio using the highest-ranked quantile.
-
-Form a short portfolio using the lowest-ranked quantile.
-
-Compute long-short returns over time.
-
-This directly evaluates whether signals translate into tradeable returns.
-
-4. Meta-Model Regime Filtering
-
-A secondary classification model is trained to identify days when the base strategy is more likely to be profitable.
-Inputs include macroeconomic indicators, aggregated text features, volatility measures, and dispersion of predictions.
-The meta-model suppresses exposure during unfavorable market regimes, reducing drawdown and improving stability.
-
-5. Risk-Managed Portfolio Construction
-
-Three weighting schemes are implemented:
-
-Equal Weight
-
-Volatility Parity
-
-Risk Parity
-
-Covariance matrices are estimated on rolling windows to construct stable and diversified portfolios.
-
-Citation
-
-Report Citation
-Yifan. (2025). Adaptive Multi-Signal Systematic Trading Strategies. MSc FinTech Diploma Project, Imperial College London.
-
-Code Repository Citation
-Yifan. (2025). Quantitative-Trading-Strategies. GitHub Repository.
-https://github.com/Starfocker/Quantitative-Trading-Strategies
-
-BibTeX (Report)
-@report{yifan2025adaptive,
-  title       = {Adaptive Multi-Signal Systematic Trading Strategies},
-  author      = {Yifan},
-  year        = {2025},
-  institution = {Imperial College London},
-  note        = {MSc FinTech Diploma Project},
-}
-
-BibTeX (Code)
-@software{yifan2025qts,
-  author  = {Yifan},
-  title   = {Quantitative-Trading-Strategies: Codebase for Adaptive Multi-Signal Systematic Trading},
-  year    = {2025},
-  url     = {https://github.com/你的用户名/Quantitative-Trading-Strategies},
-  version = {1.0}
-}
-
-Contact
-
-For questions or reproduction inquiries, please open an issue in the repository or contact directly.
