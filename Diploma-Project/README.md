@@ -25,6 +25,7 @@ Evaluation includes **Fama-MacBeth cross-sectional IC**, **long–short factor p
 
 ## Project Structure
 
+```text
 Quantitative-Trading-Strategies/
 │
 ├── VSN_LSTM/
